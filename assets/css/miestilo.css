@@ -1,0 +1,101 @@
+/*
+body{
+    background-color: #eaf2e3;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.centrado-negrita-cursiva {
+  text-align: center;   
+  font-weight: bold;  
+  font-style: italic;  
+}
+.div-parrafo{
+    background-color: white;
+
+} 
+*/
+.texto-estilo {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*Estilo para el header*/
+header {
+  background-color: #69bd45;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;        /* Ajusta el tamaño del logo */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px; /* Centrado y espacio inferior */
+}
+
+/*Estilo para la section*/
+section {
+  padding: 20px;
+}
+
+/* Imagen decorativa o promocional */
+.imagenComputadora {
+  display: block;
+  max-width: 100%;     /* Hace que se adapte al contenedor */
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease;
+}
+.imagenComputadora:hover {
+  transform: scale(1.15); /* Ligeramente más grande */
+}
+
+/*Estilo para el footer*/
+footer {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*Estilos para el nav*/
+nav {
+    background-color: #4caf50;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+nav ul li a:hover {
+  background-color: #003500; /* Verde más oscuro */
+  color: #fff;
+}
