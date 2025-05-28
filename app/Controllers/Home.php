@@ -13,13 +13,12 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    
     public function quienesSomos()
     {
         $data['Titulo'] = 'Quienes Somos';
         echo view('front/head_view',$data);
         echo view('front/navbar',$data);
-        echo view('front/Quienes_Somos');
+        echo view('front/QuienesSomos');
         echo view('front/footer_view');
     }
 
@@ -28,8 +27,17 @@ class Home extends BaseController
         $data['Titulo'] = 'Productos';
         echo view('front/head_view',$data);
         echo view('front/navbar',$data);
-        echo view('front/productos',$data);
+        echo view('front/Productos',$data);
         echo view('front/footer_view',$data);
+    }
+    
+    public function legal()
+    {
+        $data['Titulo'] = 'Legal';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('front/politica');
+        echo view('front/footer_view');
     }
 
     public function login()
@@ -39,6 +47,14 @@ class Home extends BaseController
         echo view('front/navbar',$data);
         echo view('front/inicio_sesion', $data); 
         echo view('front/footer_view',$data );
-
+    }
+    
+    public function registro()
+    {
+        $data['Titulo'] = 'Registro';
+        echo view('front/head_view',$data);
+        echo view('front/navbar',$data);
+        echo view('front/registrate');
+        echo view('front/footer_view');
     }
 }
