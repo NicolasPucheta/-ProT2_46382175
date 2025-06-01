@@ -39,7 +39,8 @@ main {
 .carousel-inner img {
   width: 100%;
   object-fit: cover;
-  height: 500px;
+  object-fit: contain; /* Mantiene la proporción y ajusta la imagen dentro */
+  max-height: 500px; 
 }
 
 .carousel-control-prev-icon,
@@ -49,84 +50,164 @@ main {
 
 /* === FOOTER === */
 footer {
-  background-color: #00070A; /* Mantenemos el fondo negro */
-  color: #E0DED1; /* Mantenemos el texto beige claro */
-  padding: 30px 0; /* Aumentamos un poco el padding vertical */
-  text-align: center; /* Centramos el texto por defecto */
+    background-color: #00070A; /* Mantenemos el fondo negro */
+    color: #E0DED1; /* Mantenemos el texto beige claro */
+    padding: 30px 0; 
+    text-align: center; /* Centramos el texto por defecto */
 }
 
 .container2 {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px; /* Añadimos un poco de padding horizontal */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre contacto y seguir */
+    align-items: flex-start; /* Alineación vertical al inicio */
+    flex-wrap: wrap; /* Permite que se apilen en pantallas pequeñas */
+}
+
+.footer-contacto {
+    text-align: left;
 }
 
 .footer-contacto p em {
-  font-style: normal; /* Evitamos la cursiva en "Contacto:" */
-  font-weight: bold;
-  color: #A68D4A; /* Resaltamos "Contacto:" con el dorado */
+    font-style: normal; 
+    font-weight: bold;
+    color: #A68D4A; /* Resaltamos "Contacto:" con el dorado */
 }
 
 .footer-contacto .btn {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .Iconos-redes img {
-  width: 50px; /* Ajustamos el tamaño de los iconos de redes sociales */
-  height: auto;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+    width: 50px; /* Ajustamos el tamaño de los iconos de redes sociales */
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .Iconos-redes img:hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text-end p {
-  color: #A68D4A; /* "¡Seguinos!" en dorado */
-  font-weight: bold;
-  margin-bottom: 5px;
+    color: #A68D4A; 
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .footer-inferior {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #282B1B; /* Línea divisoria sutil */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #282B1B; /* Línea divisoria sutil */
+    text-align: center;
+    width: 100%;
 }
 
 .footer-links a {
-  color: #E0DED1;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 0.9em;
-  transition: color 0.3s ease;
+    color: #E0DED1;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #A68D4A;
+    color: #A68D4A;
 }
 
 .Derechos p {
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 10px;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 10px;
+}
+.row {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las columnas */
+    align-items: flex-start;
+    width: 100%; /* Ocupar todo el ancho del container */
 }
 
-/* Estilos específicos para las columnas en dispositivos medianos y grandes */
+.col-md-4 {
+    /* Contenedor para la sección de contacto */
+    flex: 1; /* Permite que la columna crezca */
+    text-align: left;
+}
+
+.col-md-8 {
+    /* Contenedor para la sección de redes sociales */
+    flex: 1; /* Permite que la columna crezca */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Iconos-redes {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Centrar la parte inferior */
+.footer-inferior {
+    margin-top: 30px;
+}
+
+/* Estilos para alinear contacto a la izquierda y redes a la derecha en pantallas medianas y grandes */
 @media (min-width: 768px) {
-  footer {
-    text-align: left; /* Volvemos la alineación a la izquierda en pantallas más grandes */
-  }
+    .row {
+        display: flex;
+        justify-content: space-between; /* Espacio entre las columnas */
+        align-items: flex-start; /* Alineación vertical al inicio */
+    }
 
-  .d-flex.align-items-md-end {
-    justify-content: flex-end; /* Alinea los iconos a la derecha */
-  }
+    .col-md-4 {
+        /* Contiene la sección de contacto */
+        text-align: left; 
+    }
 
-  .footer-inferior {
-    text-align: center; /* Centramos la parte inferior */
-  }
+    .footer-contacto {
+        text-align: left; /* Aseguramos la alineación a la izquierda dentro */
+    }
+
+    .col-md-8 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Alinea la sección de redes a la derecha */
+    }
+
+    .text-end {
+        text-align: right; /* Asegura la alineación del texto "¡Seguinos!" */
+    }
+
+    .Iconos-redes {
+        justify-content: flex-end; /* Alinea los iconos a la derecha */
+    }
 }
 
+/* Para centrar la fila en pantallas más pequeñas */
+@media (max-width: 767.98px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-12, .col-md-4, .col-md-8 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px; /* Espacio entre las secciones en pantallas pequeñas */
+    }
+
+    .Iconos-redes {
+        justify-content: center;
+    }
+
+    .text-end {
+        text-align: center;
+    }
+}
 /* === NAVBAR === */
 .navbar-perfume {
   background: linear-gradient(to right, #282B1B, #283B28); /* Degradado verde oscuro */
@@ -397,3 +478,4 @@ footer {
     flex: 0 0 80%;
   }
 }
+

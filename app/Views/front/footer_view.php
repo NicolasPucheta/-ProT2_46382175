@@ -39,9 +39,6 @@
 
     <!-- Parte Inferior -->
     <div class="footer-inferior mt-4 text-center">
-      <div class="footer-links mb-2">
-        <a href="<?php echo base_url('ayuda'); ?>">Ayuda</a> 
-      </div>
       <div class="Derechos">
         <p>© 2025 @Eclat Perfumes. Todos los derechos reservados.</p>
       </div>

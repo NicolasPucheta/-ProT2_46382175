@@ -16,10 +16,9 @@ main.politica {
   border-radius: 15px;
   padding: 40px;
   margin-top: 100px; /* Ajustable dependiendo del tamaño de pantalla */
-
-  box-shadow: 0 0 10px rgba(107, 142, 35, 0.3),  /* olive drab */
-              0 0 20px rgba(85, 107, 47, 0.2),   /* dark olive green */
-              0 0 30px rgba(46, 139, 87, 0.25);  /* sea green */
+  box-shadow: 0 0 10px rgba(107, 142, 35, 0.3),  
+              0 0 20px rgba(85, 107, 47, 0.2),   
+              0 0 30px rgba(46, 139, 87, 0.25);  
   transition: box-shadow 0.3s ease-in-out;
 }
 

@@ -18,9 +18,9 @@
                     <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
                 </form>
             </div>
-                <div style="text-align: center;">
-                    ¿No tienes cuenta? <a href="<?= base_url('registrate') ?>">Regístrate aquí</a>
-                </div>
+            <div style="text-align: center; ">
+                <span style="color: #f0ad4e;">¿No tienes cuenta?</span> <a href="<?= base_url('registrate') ?>" style="color: #f0ad4e;">Regístrate aquí</a>
+            </div>
         </div>
     </div>
     <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
